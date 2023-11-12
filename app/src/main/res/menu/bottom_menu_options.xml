@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/MapFragment"
+        android:icon="@android:drawable/ic_dialog_map"
+        android:title="Find Map"></item>
+    <item
+        android:id="@+id/ItineraryFragment"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="See Itinerary"></item>
+
+
+</menu>

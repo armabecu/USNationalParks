@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MapFragment">
+
+    <fragment
+        android:id="@+id/MapFragment"
+        android:name="com.example.project_g09.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_MapFragment_to_viewParkDetails"
+            app:destination="@id/viewParkDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/ItineraryFragment"
+        android:name="com.example.project_g09.ItineraryFragment"
+        android:label="fragment_itinerary"
+        tools:layout="@layout/fragment_itinerary" >
+        <action
+            android:id="@+id/action_ItineraryFragment_to_parkItinerary"
+            app:destination="@id/parkItinerary" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewParkDetails"
+        android:name="com.example.project_g09.ViewParkDetails"
+        android:label="fragment_view_park_details"
+        tools:layout="@layout/fragment_view_park_details" >
+        <argument
+            android:name="Park"
+            app:argType="com.example.project_g09.models.State" />
+    </fragment>
+    <fragment
+        android:id="@+id/parkItinerary"
+        android:name="com.example.project_g09.ParkItinerary"
+        android:label="fragment_park_itinerary"
+        tools:layout="@layout/fragment_park_itinerary" >
+        <argument
+            android:name="fullName"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="address"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>
